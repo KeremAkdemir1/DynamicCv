@@ -1,0 +1,31 @@
+﻿@model List<DymamicCard.Models.Data.PersonInfo>
+@{
+    ViewData["Title"] = "DataIndex";
+}
+
+<table class="table table-bordered" style="border-radius:3px 3px;border-color:gray">
+    <tr>
+        <td>Person Id</td>
+        <td>Person Name</td>
+        <td>Job</td>
+        <td>Birth Date</td>
+        <td>Phone Number</td>
+        <td>Address</td>
+        <td>Mail</td>
+        <td>Website</td>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.PersonId</td>
+        <td>@x.PersonName</td>
+        <td>@x.Job</td>
+        <td>@x.BirthDate</td>
+        <td>@x.PhoneNumber</td>
+        <td>@x.Address</td>
+        <td>@x.Mail</td>
+        <td>@x.Website</td>
+        <td><a href="/Card/CardIndex/@x.PersonId">Get Card</a></td>
+    </tr>
+    }
+</table>

@@ -1,0 +1,32 @@
+﻿@model DymamicCard.Models.Data.PersonInfo
+@{
+    ViewData["Title"] = "AddData";
+}
+
+@using (Html.BeginForm("AddData", "Card", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.PersonName)
+    @Html.TextBoxFor(x => x.PersonName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Job)
+    @Html.TextBoxFor(x => x.Job, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BirthDate)
+    @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PhoneNumber)
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Address)
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Website)
+    @Html.TextBoxFor(x => x.Website, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Submit</button>
+
+}
+
